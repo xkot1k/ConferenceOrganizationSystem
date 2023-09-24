@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA09A32C-1022-4351-94AF-0FE54ACEB0A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ConferenceOrganizationSystem</RootNamespace>
+    <AssemblyName>ConferenceOrganizationSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\Views\wndAuthorization.xaml.cs">
+      <DependentUpon>wndAuthorization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\wndEvents.xaml.cs">
+      <DependentUpon>wndEvents.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Activity.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ActivityJurie.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\City.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Country.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DataBaseModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DataBaseModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DataBaseModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Direction.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Event.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\EventWinner.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HistoryOfUsing.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Jurie.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Moderator.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Organizator.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Participant.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Role.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagram.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\DataBaseModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataBaseModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\DataBaseModel.edmx.diagram">
+      <DependentUpon>DataBaseModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Resources\Icons\" />
+    <Folder Include="UI\Pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\DataBaseModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DataBaseModel.Context.cs</LastGenOutput>
+      <DependentUpon>DataBaseModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\DataBaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataBaseModel.edmx</DependentUpon>
+      <LastGenOutput>DataBaseModel.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Resources\Images\1.jpeg" />
+    <Resource Include="Resources\Images\10.jpg" />
+    <Resource Include="Resources\Images\11.jpg" />
+    <Resource Include="Resources\Images\12.jpg" />
+    <Resource Include="Resources\Images\13.jpg" />
+    <Resource Include="Resources\Images\14.png" />
+    <Resource Include="Resources\Images\15.jpg" />
+    <Resource Include="Resources\Images\16.jpg" />
+    <Resource Include="Resources\Images\17.jpg" />
+    <Resource Include="Resources\Images\18.jpeg" />
+    <Resource Include="Resources\Images\19.jpg" />
+    <Resource Include="Resources\Images\2.jpeg" />
+    <Resource Include="Resources\Images\20.jpg" />
+    <Resource Include="Resources\Images\3.jpeg" />
+    <Resource Include="Resources\Images\4.jpeg" />
+    <Resource Include="Resources\Images\5.png" />
+    <Resource Include="Resources\Images\6.jpg" />
+    <Resource Include="Resources\Images\7.jpg" />
+    <Resource Include="Resources\Images\8.jpeg" />
+    <Resource Include="Resources\Images\9.jpg" />
+    <Resource Include="Resources\Images\clearPhoto.png" />
+    <Resource Include="Resources\Images\foto1.jpg" />
+    <Resource Include="Resources\Images\foto10.jpg" />
+    <Resource Include="Resources\Images\foto11.jpg" />
+    <Resource Include="Resources\Images\foto12.jpg" />
+    <Resource Include="Resources\Images\foto13.jpg" />
+    <Resource Include="Resources\Images\foto14.jpg" />
+    <Resource Include="Resources\Images\foto15.jpg" />
+    <Resource Include="Resources\Images\foto16.jpg" />
+    <Resource Include="Resources\Images\foto17.jpg" />
+    <Resource Include="Resources\Images\foto18.jpg" />
+    <Resource Include="Resources\Images\foto19.jpg" />
+    <Resource Include="Resources\Images\foto2.jpg" />
+    <Resource Include="Resources\Images\foto20.jpg" />
+    <Resource Include="Resources\Images\foto21.jpg" />
+    <Resource Include="Resources\Images\foto22.jpg" />
+    <Resource Include="Resources\Images\foto23.jpg" />
+    <Resource Include="Resources\Images\foto24.jpg" />
+    <Resource Include="Resources\Images\foto25.jpg" />
+    <Resource Include="Resources\Images\foto26.jpg" />
+    <Resource Include="Resources\Images\foto27.jpg" />
+    <Resource Include="Resources\Images\foto28.jpg" />
+    <Resource Include="Resources\Images\foto29.jpg" />
+    <Resource Include="Resources\Images\foto3.jpg" />
+    <Resource Include="Resources\Images\foto30.jpg" />
+    <Resource Include="Resources\Images\foto31.jpg" />
+    <Resource Include="Resources\Images\foto32.jpg" />
+    <Resource Include="Resources\Images\foto33.jpg" />
+    <Resource Include="Resources\Images\foto34.jpg" />
+    <Resource Include="Resources\Images\foto35.jpg" />
+    <Resource Include="Resources\Images\foto36.jpg" />
+    <Resource Include="Resources\Images\foto37.jpg" />
+    <Resource Include="Resources\Images\foto38.jpg" />
+    <Resource Include="Resources\Images\foto39.jpg" />
+    <Resource Include="Resources\Images\foto4.jpg" />
+    <Resource Include="Resources\Images\foto40.jpg" />
+    <Resource Include="Resources\Images\foto41.jpg" />
+    <Resource Include="Resources\Images\foto42.jpg" />
+    <Resource Include="Resources\Images\foto43.jpg" />
+    <Resource Include="Resources\Images\foto44.jpg" />
+    <Resource Include="Resources\Images\foto45.jpg" />
+    <Resource Include="Resources\Images\foto46.jpg" />
+    <Resource Include="Resources\Images\foto47.jpg" />
+    <Resource Include="Resources\Images\foto48.jpg" />
+    <Resource Include="Resources\Images\foto49.jpg" />
+    <Resource Include="Resources\Images\foto5.jpg" />
+    <Resource Include="Resources\Images\foto50.jpg" />
+    <Resource Include="Resources\Images\foto51.jpg" />
+    <Resource Include="Resources\Images\foto52.jpg" />
+    <Resource Include="Resources\Images\foto53.jpg" />
+    <Resource Include="Resources\Images\foto54.jpg" />
+    <Resource Include="Resources\Images\foto55.jpg" />
+    <Resource Include="Resources\Images\foto56.jpg" />
+    <Resource Include="Resources\Images\foto57.jpg" />
+    <Resource Include="Resources\Images\foto58.jpg" />
+    <Resource Include="Resources\Images\foto59.jpg" />
+    <Resource Include="Resources\Images\foto6.jpg" />
+    <Resource Include="Resources\Images\foto60.jpg" />
+    <Resource Include="Resources\Images\foto61.jpg" />
+    <Resource Include="Resources\Images\foto62.jpg" />
+    <Resource Include="Resources\Images\foto63.jpg" />
+    <Resource Include="Resources\Images\foto64.jpg" />
+    <Resource Include="Resources\Images\foto65.jpg" />
+    <Resource Include="Resources\Images\foto66.jpg" />
+    <Resource Include="Resources\Images\foto67.jpg" />
+    <Resource Include="Resources\Images\foto68.jpg" />
+    <Resource Include="Resources\Images\foto69.jpg" />
+    <Resource Include="Resources\Images\foto7.jpg" />
+    <Resource Include="Resources\Images\foto70.jpg" />
+    <Resource Include="Resources\Images\foto8.jpg" />
+    <Resource Include="Resources\Images\foto9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\Styles\MainStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\wndAuthorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\wndEvents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

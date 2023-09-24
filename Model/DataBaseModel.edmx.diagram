@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2ed226d2c9c54dedb4b5d348206573a7" Name="Diagram1">
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.Activity" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.ActivityJurie" Width="1.5" PointX="7.5" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.City" Width="1.5" PointX="3.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.Country" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.Direction" Width="1.5" PointX="6" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.Event" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.EventWinner" Width="1.5" PointX="8.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.HistoryOfUsing" Width="1.5" PointX="5.25" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.Jurie" Width="1.5" PointX="5.25" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.Moderator" Width="1.5" PointX="8.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.Organizator" Width="1.5" PointX="5.25" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.Participant" Width="1.5" PointX="5.25" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.Role" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.sysdiagram" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConferenceOrganizationSystemModel.User" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_Activity_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_Activity_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_ActivityJurie_Activity" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_ActivityJurie_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_Event_City" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_User_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_Event_Direction" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_Moderators_Direction" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_EventWinner_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_Moderators_Event1" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_EventWinner_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_HistoryOfUsing_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_Jurie_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_Moderators_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_Organizator_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_Participant_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ConferenceOrganizationSystemModel.FK_User_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,85 @@
+﻿<Window x:Class="ConferenceOrganizationSystem.UI.Views.wndEvents"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConferenceOrganizationSystem.UI.Views"
+        mc:Ignorable="d"
+        Title="Организация конференций" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Список мероприятий" FontWeight="Bold"  FontSize="25"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Сортировка по направлению:" FontSize="18" Margin="0 0 0 10"/>
+                <ComboBox x:Name="comboDirection" SelectionChanged="comboDirection_SelectionChanged"
+                          DisplayMemberPath="Name"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="20 0 0 0">
+                <TextBlock Text="Сортировка по дате:" FontSize="18" Margin="0 0 0 10"/>
+                <DatePicker x:Name="dateDateSelect" SelectedDateChanged="comboDirection_SelectionChanged"/>
+            </StackPanel>
+            <Button x:Name="btnClear" Content="Очистить" Margin="20 13 0 0" Click="btnClear_Click"/>
+        </StackPanel>
+
+        <TextBlock Grid.Row="2" Text="По Вашему запросу результатов не найдено!" FontWeight="Bold"  FontSize="25"
+                   Visibility="Collapsed" x:Name="txtResult"/>
+
+        <ListView x:Name="listEvents" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Grid.Row="2">
+            
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical" Width="800"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1">
+                        <Grid Width="810">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="500"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0">
+                                <Image.Source>
+                                    <Binding Path="PhotoPath">
+                                        <Binding.TargetNullValue>
+                                            ../../Resources/Images/clearPhoto.png
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+
+                            <Grid Grid.Column="1" Height="300">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="100"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Row="0" Text="{Binding Name}"  FontSize="18" TextWrapping="Wrap" Margin="5"/>
+                                <TextBlock Grid.Row="1" Text="{Binding Direction.FullName}"  FontSize="18" TextWrapping="Wrap" Margin="5"/>
+                                <TextBlock Grid.Row="2" Text="{Binding Date, StringFormat={}{0:D}}"  FontSize="18" TextWrapping="Wrap"/>
+
+                            </Grid>
+
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+
+        <Button x:Name="btnAuthorization" Content="Авторизоваться" Grid.Row="3" Click="btnAuthorization_Click"/>
+
+    </Grid>
+</Window>
