@@ -42,6 +42,13 @@ namespace ConferenceOrganizationSystem.Model
                 return "../../Resources/Images/" + Photo;
             }
         }
+        public string FLP
+        {
+            get
+            {
+                return Nname + " " + Fname + " " + Patronomic;
+            }
+        }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Activity> Activities { get; set; }

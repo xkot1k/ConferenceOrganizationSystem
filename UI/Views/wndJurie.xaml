@@ -1,0 +1,28 @@
+﻿<Window x:Class="ConferenceOrganizationSystem.UI.Views.wndJurie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConferenceOrganizationSystem.UI.Views"
+        mc:Ignorable="d"
+        Title="Организация конференций" Height="600" Width="1000" 
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Окно Жюри" FontSize="30" HorizontalAlignment="Center"
+                   VerticalAlignment="Center" FontWeight="Bold"/>
+
+        <TextBlock Text="Данный раздел в разработке" FontSize="30" HorizontalAlignment="Center"
+                   VerticalAlignment="Center" Grid.Row="1"/>
+
+        <Button Content="Авторизоваться"
+                Margin="0 0 10 0" Grid.Row="3" x:Name="btnAuthorization" Click="btnAuthorization_Click"/>
+
+    </Grid>
+</Window>

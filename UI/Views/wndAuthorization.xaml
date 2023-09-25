@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConferenceOrganizationSystem.UI.Views"
         mc:Ignorable="d"
-        Title="Организация конференций" Height="400" Width="450" WindowStartupLocation="CenterScreen"
+        Title="Организация конференций" Height="420" Width="450" WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
     <Grid>
 
@@ -23,7 +23,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
-                <Button x:Name="btnAuthorization" Content="Войти" Margin="20 0 20 0" Click="btnAuthorization_Click"/>
+                <Button x:Name="btnAuthorization" Content="Войти" Margin="10 0 17 0" Click="btnAuthorization_Click"/>
                 <Button x:Name="btnBack" Content="Назад" Click="btnBack_Click"/>
             </StackPanel>
             

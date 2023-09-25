@@ -28,6 +28,14 @@ namespace ConferenceOrganizationSystem.UI.Views
             directions.Insert(0, new Model.Direction { Name = "Все направления" });
             comboDirection.SelectedIndex = 0;
             comboDirection.ItemsSource = directions;
+            if (Classes.User.user != null)
+            {
+                btnAuthorization.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                btnOrganizator.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void comboDirection_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -63,6 +71,13 @@ namespace ConferenceOrganizationSystem.UI.Views
         {
             wndAuthorization wndAuthorization = new wndAuthorization();
             wndAuthorization.Show();
+            this.Close();
+        }
+
+        private void btnOrganizator_Click(object sender, RoutedEventArgs e)
+        {
+            UI.Views.wndOrganizator wndOrganizator = new wndOrganizator(Classes.User.user);
+            wndOrganizator.Show();
             this.Close();
         }
     }

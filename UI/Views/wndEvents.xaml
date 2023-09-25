@@ -32,7 +32,8 @@
         <TextBlock Grid.Row="2" Text="По Вашему запросу результатов не найдено!" FontWeight="Bold"  FontSize="25"
                    Visibility="Collapsed" x:Name="txtResult"/>
 
-        <ListView x:Name="listEvents" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Grid.Row="2">
+        <ListView x:Name="listEvents" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Grid.Row="2"
+                   VerticalAlignment="Center">
             
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -79,7 +80,10 @@
             
         </ListView>
 
-        <Button x:Name="btnAuthorization" Content="Авторизоваться" Grid.Row="3" Click="btnAuthorization_Click"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center">
+            <Button x:Name="btnAuthorization" Content="Авторизоваться" Click="btnAuthorization_Click" Margin="0 0 20 0"/>
+            <Button x:Name="btnOrganizator" Content="Назад" Click="btnOrganizator_Click"/>
+        </StackPanel>
 
     </Grid>
 </Window>

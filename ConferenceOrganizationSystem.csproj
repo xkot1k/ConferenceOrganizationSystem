@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
@@ -68,11 +69,30 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="UI\Views\wndAddPerson.xaml.cs">
+      <DependentUpon>wndAddPerson.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Views\wndAuthorization.xaml.cs">
       <DependentUpon>wndAuthorization.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Views\wndCaptha.xaml.cs">
+      <DependentUpon>wndCaptha.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Views\wndEvents.xaml.cs">
       <DependentUpon>wndEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\wndJurie.xaml.cs">
+      <DependentUpon>wndJurie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\wndModerator.xaml.cs">
+      <DependentUpon>wndModerator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\wndOrganizator.xaml.cs">
+      <DependentUpon>wndOrganizator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Views\wndParticipant.xaml.cs">
+      <DependentUpon>wndParticipant.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -170,7 +190,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
     <Folder Include="Resources\Icons\" />
     <Folder Include="UI\Pages\" />
   </ItemGroup>
@@ -285,11 +304,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UI\Views\wndAddPerson.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\Views\wndAuthorization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UI\Views\wndCaptha.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\Views\wndEvents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\wndJurie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\wndModerator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\wndOrganizator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Views\wndParticipant.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
