@@ -142,7 +142,7 @@ namespace ConferenceOrganizationSystem.UI.Views
             {
                 stringBuilder.AppendLine("Email должен быть следующего вида: email@gmail.com");
             }
-            if (txtPhone.Text == "")
+            if (txtPhone.Text == "" || txtPhone.Text.Contains('_'))
             {
                 stringBuilder.AppendLine("Телефон должен быть заполнен!");
             }
